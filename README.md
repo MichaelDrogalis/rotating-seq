@@ -2,6 +2,14 @@
 
 A time-expiring rotating sequence.
 
+## Usage
+
+Via Clojars:
+
+```text
+[com.mdrogalis/rotating-seq "0.1.0"]
+```
+
 ## License
 
 Copyright © 2015 Michael Drogalis
