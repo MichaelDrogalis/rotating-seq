@@ -1,4 +1,4 @@
-(defproject rotating-seq "0.1.0"
+(defproject com.mdrogalis/rotating-seq "0.1.0"
   :description "A time expiring rotating sequence"
   :url "https://github.com/MichaelDrogalis/rotating-seq"
   :license {:name "Eclipse Public License"
