@@ -1,6 +1,7 @@
 (ns rotating-seq.core)
 
 (defn create-r-seq [bucket-lifetime expire-interval]
+  (assert (zero? (mod bucket-lifetime expire-interval)) "Bucket lifetime must divide evenly over expiration interval")
   (let [n-buckets (int (Math/ceil (/ bucket-lifetime expire-interval)))]
     (vec (repeat n-buckets []))))
 
