@@ -6,7 +6,7 @@
     (vec (repeat n-buckets []))))
 
 (defn add-to-head [r-seq elements]
-  (update-in r-seq [0] (comp vec concat) elements))
+  (update-in r-seq [0] into elements))
 
 (defn expire-bucket [r-seq]
-  (vec (conj (butlast r-seq) [])))
+  (conj (pop r-seq) []))
