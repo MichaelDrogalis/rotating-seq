@@ -8,5 +8,11 @@
 (defn add-to-head [r-seq elements]
   (update-in r-seq [0] into elements))
 
+(defn update-head [r-seq f & args]
+  (update-in r-seq [0] (fn [x]
+                         (let [result (f (concat x args))]
+                           (if-not (coll? result)
+                             [result] result)))))
+
 (defn expire-bucket [r-seq]
   (vec (conj (butlast r-seq) [])))
